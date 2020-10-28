@@ -1,0 +1,30 @@
+Source: budgie-analogue-clock-applet
+Section: misc
+Priority: optional
+Maintainer: David Mohammed <fossfreedom@ubuntu.com>
+Build-Depends: debhelper (>= 11),
+ libgtk-3-dev,
+ valac,
+ budgie-core-dev,
+ libbudgie-plugin0,
+ meson,
+ libpeas-dev
+Standards-Version: 4.2
+Vcs-Browser: https://github.com/UbuntuBudgie/analogue-clock-applet/tree/debian
+Vcs-Git: https://github.com/UbuntuBudgie/analogue-clock-applet -b debian
+Homepage: https://github.com/samlane-ma/analogue-clock-applet
+
+
+Package: budgie-analogue-clock-applet
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Add a simple analogue clock on the Budgie panel.
+ The applet currently allows you to:
+ .
+    Change the clock size through the applet settings
+    Change the color of the frame, face, and hands
+    Enable or disable the hour markings on the face
+ .
+ The applet will respect the panel settings, and not draw a clock larger
+ than the Budgie Panel. However, if the panel is resized, the clock will
+ change size as well, up to the clock size specified in the applet setting.
